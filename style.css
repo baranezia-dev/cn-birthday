@@ -7,7 +7,7 @@ html, body, .container {
 }
 
 body {
-	background: #e74;
+	background: #34495e;
     overflow: hidden;
     display: flex;
     align-items:center;
@@ -16,6 +16,7 @@ body {
     height:100vh;
     background-image: linear-gradient( to bottom, #190e14 ,#0d0d4b 30%, #c76075 80%, #e9b64b 95% );
     background-image: radial-gradient(circle at center bottom, #e9b64b ,#c76075 15%, #0d0d4b 75%, #190e14 90%);
+    scroll-behavior: smooth;
 }
 
 section {
@@ -25,7 +26,8 @@ section {
     position:relative;
     z-index: -1;
   }
-  figure {
+
+figure {
     width:100%;
     height:100%;
     overflow: hidden;
@@ -34,9 +36,9 @@ section {
     clip-path: polygon(25% 0, 100% 0%, 80% 100%, 0% 100%);
     /* border-bottom: 1px solid #ea4986;
     animation:animateShadow 1s linear infinite alternate; */
-  }
+}
   
-  .overlay {
+.overlay {
     width:100%;
     height:100%;
     position:absolute;
@@ -45,30 +47,16 @@ section {
     background:red;
     mix-blend-mode: soft-light;
     animation:animateMixColor 3s linear infinite alternate;
-  }
+}
   
-  img {
+img {
     width:100%;
     height:100%;
     object-fit:cover;
     border:0;
-  }
-  
-  
-  @keyframes animateMixColor {
-      0%   {background-color: #ea4986;}
-      60%  {background-color: #2b21f1;}
-      100% {background-color: #f12121;}
-   }
-  
-  /* @keyframes animateShadow {
-      0%   {border-color:  #ea4986;}
-      60%  {border-color:  #2b21f1;}
-      100% {border-color: #f12121;}
-   }
-   */
-  
-  h1 {
+}
+
+h1 {
     color : #fff;
     font-family: 'Frank Ruhl Libre';
     font-weight:700;
@@ -76,9 +64,23 @@ section {
     position: absolute;
     letter-spacing:1px;
     width:300px;
-    top:36%;
+    top:30%;
     right:-200px;
-  }
+}
+  
+  
+@keyframes animateMixColor {
+      0%   {background-color: #ea4986;}
+      60%  {background-color: #2b21f1;}
+      100% {background-color: #f12121;}
+}
+  
+/* @keyframes animateShadow {
+      0%   {border-color:  #ea4986;}
+      60%  {border-color:  #2b21f1;}
+      100% {border-color: #f12121;}
+}
+*/
 
 div#beach, canvas#canvas {
     position: absolute;
@@ -94,17 +96,18 @@ div#beach {
     background-position: bottom right;
     background-size: 1700px;
     background-repeat: no-repeat;
+    z-index: -2;
 }
 
 div#sea {
   background-color: blue;
-  height: 85px;
+  height: 50px;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-image:
-    radial-gradient(circle at center top, #23485a, #0d0246);
+  background-image: radial-gradient(circle at center top, #23485a, #0d0246);
+  z-index: -3;
 }
 
 .merrywrap{
@@ -113,7 +116,7 @@ div#sea {
   left: 0px;
   bottom: 0px;
   top: 0px;
-  background-color: #d44;
+  background-color: #34495e;
   transition: background-color .5s ease;
 }
 
@@ -124,11 +127,11 @@ div#sea {
   left:50%;
   margin-left: -150px;
   bottom: 40px;
-  z-index:10;
+  z-index: 1;
 }
 
 .giftbox > div{
-    background: #34495e;
+    background: #d44;
     position: absolute;
 }
 
@@ -215,7 +218,7 @@ div#sea {
 
 .icons{
   position:absolute;
-  left: 10px;
+  left: 15px;
   top: 15px;
   /*top:50%;
   width: 100%;*/
@@ -467,26 +470,63 @@ div#sea {
   right: 25px;
 }
 
-@media (min-width: 1000px) {
-  .icons { left: 30px; }
-  .icons .row span { font-size: 56px; }
-  #people {
-    left: 80px;
-    bottom: 70px;
-    width: 160px;
-  }
-  div#beach {
-    background-size: 2000px;
-  }
-  div#video {
-    right: 290px;
-    bottom: 235px;
-  }
-  div#video iframe {
-    width: 295px;
-    height: 185px;
-  }
-  .moon {
-    right: 230px;
-  }
+@media screen and (max-width: 680px) {
+    html, body{
+        overflow-x: hidden;
+        width: auto;
+        float: none;
+    }
+    section {
+        width:400px;
+        height:400px;
+        right: 30px;
+        position:relative;
+    }
+    figure {
+        width:94%;
+        height:94%;
+        overflow: hidden;
+        position:relative;
+        -webkit-clip-path: polygon(25% 0, 100% 0%, 80% 100%, 0% 100%);
+        clip-path: polygon(25% 0, 100% 0%, 80% 100%, 0% 100%);
+        /* border-bottom: 1px solid #ea4986;
+        animation:animateShadow 1s linear infinite alternate; */
+    }
+     
+    .overlay {
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        background:red;
+        mix-blend-mode: soft-light;
+        animation:animateMixColor 3s linear infinite alternate;
+    }
+
+    h1 {
+        color : #fff;
+        font-family: 'Frank Ruhl Libre';
+        font-weight:700;
+        font-size:3em;
+        position: absolute;
+        letter-spacing:1px;
+        width:300px;
+        top:24%;
+        right:-205px;
+    }
+
+    .icons { 
+        top: 20px;
+        left: 20px; 
+    }
+    .icons .row span { font-size: 42px; }
+    .moon {
+        top: 20px;
+        right: 20px;
+        width: 80px;
+        height: 80px;
+    }
+  
+    div#beach { background-size: 1000px; }
 }
