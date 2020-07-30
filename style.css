@@ -2,20 +2,21 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 
 html, body, .container {
-    height: 100%;
-    font-family: 'Kaushan Script','Sail', cursive;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Kaushan Script','Sail', cursive;
 }
 
 body {
 	background: #34495e;
-    overflow: hidden;
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    width:100%;
-    background-image: linear-gradient( to bottom, #190e14 ,#0d0d4b 30%, #c76075 80%, #e9b64b 95% );
-    background-image: radial-gradient(circle at center bottom, #e9b64b ,#c76075 15%, #0d0d4b 75%, #190e14 90%);
-    scroll-behavior: smooth;
+  overflow: hidden;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  background-image: linear-gradient( to bottom, #190e14 ,#0d0d4b 30%, #c76075 80%, #e9b64b 95% );
+  background-image: radial-gradient(circle at center bottom, #e9b64b ,#c76075 15%, #0d0d4b 75%, #190e14 90%);
 }
 
 section {
@@ -24,7 +25,7 @@ section {
     right: 100px;
     position:relative;
     z-index: -1;
-  }
+}
 
 figure {
     width:100%;
@@ -82,20 +83,20 @@ h1 {
 */
 
 div#beach, canvas#canvas {
-    position: absolute;
+  position: absolute;
 	top: 0;
 	left: 0;
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 div#beach {
-    background-image: url(img/beachsil2.png);
-    /* background-size: cover; */
-    background-position: bottom right;
-    background-size: 1700px;
-    background-repeat: no-repeat;
-    z-index: -2;
+  background-image: url(img/beachsil2.png);
+  /* background-size: cover; */
+  background-position: bottom right;
+  background-size: 1700px;
+  background-repeat: no-repeat;
+  z-index: -2;
 }
 
 div#sea {
@@ -505,7 +506,7 @@ div#sea {
 
     h1 {
         color : #fff;
-        font-family: 'Frank Ruhl Libre';
+        font-family: 'Frank Ruhl Libre', serif;
         font-weight:700;
         font-size:3em;
         position: absolute;
