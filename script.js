@@ -63,8 +63,6 @@ window.onload = function () {
 function reveal() {
     document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
 
-    loop();
-
     var w, h;
     if (window.innerWidth >= 1000) {
         w = 295; h = 185;
