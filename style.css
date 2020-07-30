@@ -46,7 +46,7 @@ figure {
     left:0;
     background:red;
     mix-blend-mode: soft-light;
-    animation:animateMixColor 6s linear infinite alternate;
+    animation:animateMixColor 3s linear infinite alternate;
 }
   
 img {
@@ -58,7 +58,7 @@ img {
 
 h1 {
     color : #fff;
-    font-family: 'Frank Ruhl Libre';
+    font-family: 'Frank Ruhl Libre', serif;
     font-weight:700;
     font-size:3em;
     position: absolute;
@@ -232,45 +232,45 @@ div#sea {
 }
 
 .icons .row span{ 
-      color: #e5e5e5;
+    color: #e5e5e5;
 	  text-shadow: 4px 4px 0 rgba(96, 125, 139, 0.4);
-      font-size: 50px;   
-      display: inline-block;
-      opacity:0;
-      transition: transform 0.5s ease-in, opacity 0.7s;
+    font-size: 50px;   
+    display: inline-block;
+    opacity:0;
+    transition: transform 0.5s ease-in, opacity 0.7s;
 }
 
 .step-1 .giftbox{
-    animation:wobble 0.5s linear infinite forwards;
-  }
+  animation:wobble 0.5s linear infinite forwards;
+}
 
 .step-1 .cover{
-     animation:wobble 0.5s linear infinite  0.1s forwards;
+  animation:wobble 0.5s linear infinite  0.1s forwards;
 }
 
 .step-1 .icons .row span{
-    opacity:1;
-  }
+  opacity:1;
+}
 
 .step-2 .giftbox:after{
   opacity:0;
 }
 
 .step-3 .giftbox,.step-4 .giftbox{
-    opacity: 0;
-    z-index:1;
+  opacity: 0;
+  z-index:1;
 }
 
 .step-3 .giftbox:after,.step-4 .giftbox:after{
-    opacity:0;
-  }
+  opacity:0;
+}
 
 .step-2 .giftbox .cover{
-      animation:flyUp 0.4s ease-in forwards;
+  animation:flyUp 0.4s ease-in forwards;
 }
 
 .step-2 .giftbox .box{
-      animation:flyDown 0.2s ease-in 0.05s forwards;
+  animation:flyDown 0.2s ease-in 0.05s forwards;
 }
 
 @keyframes wobble{
@@ -479,13 +479,14 @@ div#sea {
     section {
         width:400px;
         height:400px;
+        top: 20px;
         right: 30px;
         position:relative;
     }
     figure {
         width:94%;
         height:94%;
-        overflow: hidden;
+        overflow:hidden;
         position:relative;
         -webkit-clip-path: polygon(25% 0, 100% 0%, 80% 100%, 0% 100%);
         clip-path: polygon(25% 0, 100% 0%, 80% 100%, 0% 100%);
