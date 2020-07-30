@@ -13,7 +13,6 @@ body {
     align-items:center;
     justify-content:center;
     width:100%;
-    height:100vh;
     background-image: linear-gradient( to bottom, #190e14 ,#0d0d4b 30%, #c76075 80%, #e9b64b 95% );
     background-image: radial-gradient(circle at center bottom, #e9b64b ,#c76075 15%, #0d0d4b 75%, #190e14 90%);
     scroll-behavior: smooth;
@@ -46,7 +45,7 @@ figure {
     left:0;
     background:red;
     mix-blend-mode: soft-light;
-    animation:animateMixColor 3s linear infinite alternate;
+    animation:animateMixColor 6s linear infinite alternate;
 }
   
 img {
@@ -401,7 +400,7 @@ div#sea {
 .step-4 .icons .row span,.step-3 .icons .row span { 
 	/*animation: wobble 0.6s linear infinite forwards;*/
   color: #c6e2ff;
-    animation: neon .08s ease-in-out infinite alternate;
+    animation: neon 1s ease-in-out infinite alternate;
 }
 
 .step-4 .icons .row span:nth-child(even),.step-3 .icons .row span:nth-child(even) { 
